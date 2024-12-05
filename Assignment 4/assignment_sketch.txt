@@ -1,0 +1,23 @@
+PASSOS PARA ASSIGNMENT
+
+1) Ler as 10 pastas iniciais (paralelizado)
+2) Para cada pasta, verificar se o nome tem q ser alterado
+	- Se sim, criar uma nova pasta e mover todos os ficheiros da pasta antiga para esta nova pasta (sequencialmente) e depois avançar para ponto 3)
+	- Se não, avançar diretamente para ponto 3)
+3) Ler as 100 pastas para cada pasta referenciada anteriormente (paralelizado)
+4) Para cada uma dessas pastas, verificar se o nome tem q ser alterado
+	- Se sim, alterar (sequencialmente)
+	- Se não, não fazer nada
+5) Mandar resposta de volta para todos os Actors de nível superior, semelhante à recursão.
+
+
+Main Class: Criar e iniciar Actor 1 com o caminho para a pasta principal "Tree";
+Actor 1: Criar um objecto File com o caminho recebido e enviar uma mensagem a Actor 2 com o objecto;
+Actor 2: Criar número necessário de Actor 3. No handleMessage receber o objecto da Tree e após isso enviar mensagem, em um for loop, a cada um dos Actor 3 um Objecto File de uma Folder distinta presente na "Tree"; (PONTO 1)
+Actor 3: Criar número necessário de Actor 4. No handleMessage receber o objecto da respetiva Folder e executar o ponto 2). Após isso enviar mensagem, em um for loop, a cada um dos Actor 4 um Objecto File de um File distinto presente na Folder recebida inicialmente; (PONTO 2 e 3)
+Actor 4: Executar ponto 4 (e 5);
+
+
+Actors criados na main: Actor 1 (conhecido como Consumer) e Actor 2 (conhecido como FolderManager)
+Actors criados em Actor 2: Actor 3 (conhecido como FileManager)
+Actors criados em Actor 3: Actor 4 (conhecido como Employee)
