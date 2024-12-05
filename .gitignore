@@ -56,3 +56,6 @@ build/
 application.properties
 application.yml
 *.properties
+
+
+.DS_Store
