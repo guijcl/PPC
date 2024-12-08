@@ -44,11 +44,4 @@ File system batch renaming tool using a lightweight actor framework. Practical e
 - A3 (CUDA): 19.8/20
 - A4 (Actors): 15/20
 
-### Tests
-
-- Mini-test 1: 3.5/5
-- Mini-test 2: 2.4/5
-- Mini-test 3: 3.7/5
-- Mini-test 4: 3.3/5
-
 Final Grade: 16/20
