@@ -37,8 +37,6 @@ File system batch renaming tool using a lightweight actor framework. Practical e
 
 ## Evaluation
 
-### Assignments
-
 - A1 (Java Threads): 20/20
 - A2 (ForkJoin): 18/20
 - A3 (CUDA): 19.8/20
